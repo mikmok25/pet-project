@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet_Project Meme Creator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <h1>Welcome to InstaMeme ✨</h1>
+    <div class="flex-row">
+      <section class="left-section">
+        <div class="flex-container">
+          <textarea id="top-text"></textarea>
+          Text size:
+          <input
+            type="range"
+            id="top-text-size-input"
+            min="0.05"
+            max="0.25"
+            value="0.15"
+            step="0.01"
+          />
+          <label for="top-text-color-picker:">Top Text Color</label>
+          <input type="color" id="top-text-color-picker" value="#ffffff" />
+        </div>
+        <div class="flex-container">
+          <textarea id="bottom-text"></textarea>
+          Text size:
+          <input
+            type="range"
+            id="bottom-text-size-input"
+            min="0.05"
+            max="0.25"
+            value="0.15"
+            step="0.01"
+          />
+
+          <label for="bottom-text-color-picker">Bottom Text Color</label>
+
+          <input type="color" id="bottom-text-color-picker" value="#ffffff" />
+        </div>
+        <div>
+          <input type="file" id="image-input" accept="image/*" />
+        </div>
+        <div>
+          <button id="generate-btn">Generate!</button>
+        </div>
+      </section>
+      <section class="right-section">
+        <div class="canvas-container">
+          <div class="empty-canvas-message">
+            <h1>Your meme image will be placed here.</h1>
+          </div>
+          <canvas
+            id="meme-canvas"
+            draggable="true"
+          ></canvas>
+          <div class="overlay"></div>
+          <div class="download-reset-buttons">
+            <button class="download-btn">
+              <i class="fa-solid fa-download"></i>
+            </button>
+            <button class="reset-btn">
+              <i class="fa-solid fa-rotate-right"></i>
+            </button>
+            <button class="delete-btn">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer id="page-footer">
+      Work by Mick Nixon Manuit
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
